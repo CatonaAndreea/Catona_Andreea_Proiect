@@ -1,0 +1,51 @@
+﻿<Window x:Class="WpfApp1.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfApp1"
+        mc:Ignorable="d"
+        Title="Library" Height="450" Width="800">
+    <Grid x:Name="dsf" AutomationProperties.Name="fsf" Margin="0,0,0,-6" Background="Tan">
+        <TextBox Name="title" HorizontalAlignment="Left" Margin="10,96,0,0"  TextWrapping="Wrap" VerticalAlignment="Top" Width="200" Height="30" Background="#FF987C6A" FontSize="14">
+            <TextBox.Foreground>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="Black"/>
+                    <GradientStop Color="Black" Offset="1"/>
+                </LinearGradientBrush>
+            </TextBox.Foreground>
+        </TextBox>
+        <TextBox Name="author" HorizontalAlignment="Left" Margin="10,170,0,0"  TextWrapping="Wrap" VerticalAlignment="Top" Width="200" Height="30" Background="#FF987C6A" FontSize="14"/>
+        <TextBox Name="publishedBy" HorizontalAlignment="Left" Margin="227,170,0,0"  TextWrapping="Wrap" VerticalAlignment="Top" Width="199" Height="30" Background="#FF987C6A" FontSize="14" >
+            <TextBox.Foreground>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="Black"/>
+                    <GradientStop Color="Black" Offset="1"/>
+                </LinearGradientBrush>
+            </TextBox.Foreground>
+        </TextBox>
+        <TextBox Name="pages" HorizontalAlignment="Left" Margin="227,247,0,0"  TextWrapping="Wrap" VerticalAlignment="Top" Width="198" Height="30" Background="#FF987C6A" FontSize="14"/>
+        <ListBox Name="booksList" SelectionChanged="onBookSelectionChange" Margin="451,82,43,18" FontSize="14">
+            <ListBox.Background>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="#FFB2B7C5"/>
+                    <GradientStop Color="#FF95735C" Offset="1"/>
+                    <GradientStop Color="#FF987C6A" Offset="0.863"/>
+                    <GradientStop Color="#FFD8B889" Offset="0.249"/>
+                    <GradientStop Color="#FFD1BEAB" Offset="0.004"/>
+                </LinearGradientBrush>
+            </ListBox.Background>
+        </ListBox>
+        <Label Content="Books list" HorizontalAlignment="Left" Margin="509,21,0,0" VerticalAlignment="Top" Width="190" FontSize="30" />
+
+
+        <Button Content="Add" Click="InsertBook" HorizontalAlignment="Left" Margin="130,316,0,0" VerticalAlignment="Top" Height="26" Width="90" Background="#FF987C6A" Foreground="White"/>
+        <Button Content="Delete" Click="DeleteBook" HorizontalAlignment="Left" Margin="130,401,0,0" VerticalAlignment="Top" Height="29" Width="90" Background="#FF987C6A" Foreground="White"/>
+        <Button Content="Update" Click="UpdateBook" HorizontalAlignment="Left" Margin="130,357,0,0" VerticalAlignment="Top" Height="28" Width="90" Background="#FF987C6A" Foreground="White"/>
+        <Label Content="Library" HorizontalAlignment="Left" Margin="295,10,0,0" VerticalAlignment="Top" FontSize="40"/>
+        <Label Content="Title" HorizontalAlignment="Left" Margin="10,63,0,0" VerticalAlignment="Top" Foreground="#FF02000F" FontSize="20" Background="{x:Null}" Width="78" Height="33"/>
+        <Label Content="Author" HorizontalAlignment="Left" Margin="17,133,0,0" VerticalAlignment="Top" FontSize="20"/>
+        <Label Content="Published by" HorizontalAlignment="Left" Margin="228,133,0,0" VerticalAlignment="Top" FontSize="20"/>
+        <Label Content="No. pages" HorizontalAlignment="Left" Margin="228,210,0,0" VerticalAlignment="Top" FontSize="20"/>
+    </Grid>
+</Window>
